@@ -168,6 +168,7 @@ class Sale:
             'channel': channel.id,
             'invoice_method': tryton_action['invoice_method'],
             'shipment_method': shipment_method,
+            'channel_tax_amount': Decimal(order_data.get('tax_amount', 0)),
             'lines': [],
         })
 

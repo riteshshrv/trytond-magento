@@ -295,6 +295,7 @@ class TestSale(TestBase):
                             order_data
                         )
 
+                self.assertEqual(order.channel_tax_amount, Decimal('5'))
                 self.assertEqual(order.state, 'confirmed')
                 self.assertFalse(order.has_channel_exception)
 
